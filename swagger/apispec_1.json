@@ -1,0 +1,43 @@
+{
+  "definitions": {}, 
+  "info": {
+    "description": "powered by Flasgger", 
+    "termsOfService": "/tos", 
+    "title": "A swagger API", 
+    "version": "0.0.1"
+  }, 
+  "paths": {
+    "/": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "goes to home page"
+          }
+        }, 
+        "summary": "Welcome home!"
+      }
+    }, 
+    "/headers": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "return the headers"
+          }
+        }, 
+        "summary": "This will return the headers sent in the request"
+      }
+    }, 
+    "/helloworld": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "print hello world"
+          }
+        }, 
+        "summary": "This hello world api prints hello world"
+      }
+    }
+  }, 
+  "host" : "http://hello-world.cp4i-dev.svc.cluster.local:8080",
+  "swagger": "2.0"
+}
