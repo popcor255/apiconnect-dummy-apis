@@ -1,0 +1,300 @@
+swagger: '2.0'
+host: 'localhost:8080'
+definitions: {}
+info:
+  description: FASTPlus API definitions defined by CitiusTech
+  version: '2'
+  title: FHIR_Location
+paths:
+  '/Patient/{id}':
+    get:
+      description: |
+        get a list of tags used for the nominated resource. This duplicates the HTTP header entries
+      operationId: 'GET /Patient/{id}'
+      parameters:
+        - name: id
+          in: path
+          required: true
+          type: string
+      responses:
+        '200':
+          description: |
+            Succesfully retrieved resource
+  /Patient:
+    get:
+      description: ''
+      operationId: GET /Patient
+      parameters:
+        - name: _id
+          required: false
+          in: query
+          type: string
+        - name: identifier
+          required: false
+          in: query
+          type: string
+        - name: birthdate
+          required: false
+          in: query
+          type: string
+        - name: family
+          required: false
+          in: query
+          type: string
+        - name: given
+          required: false
+          in: query
+          type: string
+        - name: gender
+          required: false
+          in: query
+          type: string
+        - name: name
+          required: false
+          in: query
+          type: string
+        - name: _revinclude
+          required: false
+          in: query
+          type: string
+      responses:
+        '200':
+          description: |
+            Successfully retrieved resource(s)
+  '/Encounter/{id}':
+    get:
+      description: |
+        get a list of tags used for the nominated resource. This duplicates the HTTP header entries
+      operationId: 'GET /Encounter/{id}'
+      parameters:
+        - name: id
+          in: path
+          required: true
+          type: string
+      responses:
+        '200':
+          description: |
+            Succesfully retrieved resource
+  /Encounter:
+    get:
+      description: ''
+      operationId: GET /Encounter
+      parameters:
+        - name: _id
+          required: false
+          in: query
+          type: string
+        - name: identifier
+          required: false
+          in: query
+          type: string
+        - name: date
+          required: false
+          in: query
+          type: string
+        - name: class
+          required: false
+          in: query
+          type: string
+        - name: patient
+          required: false
+          in: query
+          type: string
+        - name: status
+          required: false
+          in: query
+          type: string
+        - name: type
+          required: false
+          in: query
+          type: string
+        - name: _revinclude
+          required: false
+          in: query
+          type: string
+      responses:
+        '200':
+          description: |
+            Successfully retrieved resource(s)
+  '/Practitioner/{id}':
+    get:
+      description: |
+        get a list of tags used for the nominated resource. This duplicates the HTTP header entries
+      operationId: 'GET /Practitioner/{id}'
+      parameters:
+        - name: id
+          in: path
+          required: true
+          type: string
+      responses:
+        '200':
+          description: |
+            Succesfully retrieved resource
+  /Practitioner:
+    get:
+      description: ''
+      operationId: GET /Practitioner
+      parameters:
+        - name: identifier
+          required: false
+          in: query
+          type: string
+        - name: name
+          required: false
+          in: query
+          type: string
+        - name: family
+          required: false
+          in: query
+          type: string
+        - name: given
+          required: false
+          in: query
+          type: string
+      responses:
+        '200':
+          description: |
+            Successfully retrieved resource(s)
+  '/PractitionerRole/{id}':
+    get:
+      description: |
+        get a list of tags used for the nominated resource. This duplicates the HTTP header entries
+      operationId: 'GET /PractitionerRole/{id}'
+      parameters:
+        - name: id
+          in: path
+          required: true
+          type: string
+      responses:
+        '200':
+          description: |
+            Succesfully retrieved resource
+  /PractitionerRole:
+    get:
+      description: ''
+      operationId: GET /PractitionerRole
+      parameters:
+        - name: specialty
+          required: false
+          in: query
+          type: string
+        - name: practitioner
+          required: false
+          in: query
+          type: string
+        - name: _include
+          required: false
+          in: query
+          type: string
+      responses:
+        '200':
+          description: |
+            Successfully retrieved resource(s)
+  '/Procedure/{id}':
+    get:
+      description: |
+        get a list of tags used for the nominated resource. This duplicates the HTTP header entries
+      operationId: 'GET /Procedure/{id}'
+      parameters:
+        - name: id
+          in: path
+          required: true
+          type: string
+      responses:
+        '200':
+          description: |
+            Succesfully retrieved resource
+  /Procedure:
+    get:
+      description: ''
+      operationId: GET /Procedure
+      parameters:
+        - name: status
+          required: false
+          in: query
+          type: string
+        - name: patient
+          required: false
+          in: query
+          type: string
+        - name: date
+          required: false
+          in: query
+          type: string
+        - name: code
+          required: false
+          in: query
+          type: string
+      responses:
+        '200':
+          description: |
+            Successfully retrieved resource(s)
+  '/Condition/{id}':
+    get:
+      description: |
+        get a list of tags used for the nominated resource. This duplicates the HTTP header entries
+      operationId: 'GET /Condition/{id}'
+      parameters:
+        - name: id
+          in: path
+          required: true
+          type: string
+      responses:
+        '200':
+          description: |
+            Succesfully retrieved resource
+  /Condition:
+    get:
+      description: ''
+      operationId: GET /Condition
+      parameters:
+        - name: clinical-status
+          required: false
+          in: query
+          type: string
+        - name: category
+          required: false
+          in: query
+          type: string
+        - name: code
+          required: false
+          in: query
+          type: string
+        - name: onset-date
+          required: false
+          in: query
+          type: string
+      responses:
+        '200':
+          description: |
+            Successfully retrieved resource(s)
+  '/Organization/{id}':
+    get:
+      description: |
+        get a list of tags used for the nominated resource. This duplicates the HTTP header entries
+      operationId: 'GET /Organization/{id}'
+      parameters:
+        - name: id
+          in: path
+          required: true
+          type: string
+      responses:
+        '200':
+          description: |
+            Succesfully retrieved resource
+  /Organization:
+    get:
+      description: ''
+      operationId: GET /Organization
+      parameters:
+        - name: name
+          required: false
+          in: query
+          type: string
+        - name: address
+          required: false
+          in: query
+          type: string
+      responses:
+        '200':
+          description: Successfully retrieved resource(s)
